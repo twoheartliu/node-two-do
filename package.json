@@ -6,7 +6,7 @@
   "files": [
     "*.js"
   ],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "twoheart",
   "description": "CLI for todos",
   "homepage": "https://github.com/twoheartliu/node-two-do#readme",

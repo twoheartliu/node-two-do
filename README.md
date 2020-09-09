@@ -5,11 +5,12 @@
 
 CLI for todos
 
-<div align="center"><img src="https://raw.githubusercontent.com/fanfoujs/nofan/master/media/screenshot.png" alt="screenShoot" /></div>
+<div align="center"><img src="https://github.com/twoheartliu/node-two-do/blob/master/media/screenshoot.png?raw=true" alt="screenShoot" /></div>
 
 ## Features
 
-- 
+showing and manage your todos
+
 
 ## Install
 
@@ -29,7 +30,7 @@ $ npm i -g node-two-do
 ### Commands
 
 ```bash
-$ td                           # Print all todos
+$ td                           # Print all todos to manage
 $ td add|a                     # Add a task
 $ td clear|c                   # Empty all data
 ```
