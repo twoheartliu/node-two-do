@@ -1,6 +1,8 @@
 const db = require('./db.js');
 const inquirer = require('inquirer');
+const chalk = require('chalk');
 
+const log = console.log.bind(console);
 
 module.exports.add = async (title) => {
   // 读取之前的任务
@@ -17,13 +19,21 @@ module.exports.clear = async () => {
 
 function writeToList(list) {
   db.write(list).then(() => {
-    console.log('操作成功');
+    log(chalk.blue('操作成功！'));
   }, () => {
-    console.log('操作失败');
+    log(chalk.red('操作失败！'));
   })
 }
+
+function checkContent(obj) {
+  if (obj.title.trim() === '') {
+    throw Error(chalk.red('请输入不为空的内容！'));
+  }
+}
+
 function askForCreateTask(list) {
-  inquirer.prompt({type: 'input', name: 'title', message: '请输入标题'}).then((answer4) => {
+  inquirer.prompt({type: 'input', name: 'title', message: '请输入'}).then((answer4) => {
+    checkContent(answer4);
     list.push({
       title: answer4.title,
       done: false
@@ -43,7 +53,8 @@ function markAsUndone(list, index) {
 }
 
 function updateTitle(list, index) {
-  inquirer.prompt({type: 'input', name: 'title', message: '请输入新标题', default: list[index].title}).then((answer3) => {
+  inquirer.prompt({type: 'input', name: 'title', message: '请输入新任务', default: list[index].title}).then((answer3) => {
+    checkContent(answer3);
     list[index].title = answer3.title;
     writeToList(list);
   });
