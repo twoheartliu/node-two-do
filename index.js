@@ -22,7 +22,7 @@ function writeToList(list) {
     log(chalk.blue('操作成功！'));
   }, () => {
     log(chalk.red('操作失败！'));
-  })
+  });
 }
 
 function checkContent(obj) {

@@ -7,15 +7,15 @@ const log = console.log.bind(console);
 
 const cli = meow(`  
 	Usage
-	  $ cli [options] [command] more...
+	  $ td [options] [command] more...
 
 	Commands
 	  add|a      add a task
 	  clear|c    clearing all todos 
 
 	Examples
-	  $ node cli add 吃饭饭
-	  $ node cli clear
+	  $ td add 吃饭饭
+	  $ td clear
 `, {
   flags: {
     help: {

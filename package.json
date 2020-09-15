@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest"
   },
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "twoheart",
   "description": "CLI for todos",
   "homepage": "https://github.com/twoheartliu/node-two-do#readme",
